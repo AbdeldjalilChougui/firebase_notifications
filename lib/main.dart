@@ -13,6 +13,7 @@ FirebaseApp? app;
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   print('A bg message just showed up :  ${message.messageId}');
+  // Do anything in background
 }
 
 void main() async {
