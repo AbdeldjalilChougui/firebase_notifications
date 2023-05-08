@@ -64,11 +64,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    LocalNotificationService.initialize(context, privateMessage?.data);
+    LocalNotificationService.initialize();
 
     FirebaseMessaging.onMessage.listen((message) {
       RemoteNotification notification = message.notification!;
-      AndroidNotification android = message.notification!.android!;
 
       print(notification.body);
       print(notification.title);
