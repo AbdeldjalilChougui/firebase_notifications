@@ -61,8 +61,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  RemoteMessage? privateMessage;
-
   @override
   void initState() {
     LocalNotificationService.initialize();
@@ -74,7 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
       print(notification.title);
       print(notification.android);
 
-      privateMessage = message;
       LocalNotificationService.display(message);
     });
     super.initState();
